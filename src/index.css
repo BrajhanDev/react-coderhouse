@@ -1,0 +1,10 @@
+
+.container-wid {
+    position: relative;
+}
+
+.badge {
+    font-size: 12px;
+    position: absolute;
+    right: -35%;
+}
