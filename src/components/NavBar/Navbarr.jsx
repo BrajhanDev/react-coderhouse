@@ -1,9 +1,10 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
-import CardWidget from "./CardWidget";
-import logo from '../images/logo.png'
+
+import logo from '../../images/logo.png'
 import { Nav, NavDropdown } from "react-bootstrap";
+import CardWidget from "../CardWidget/CardWidget";
 
 const Navbarr = () => {
   return (
