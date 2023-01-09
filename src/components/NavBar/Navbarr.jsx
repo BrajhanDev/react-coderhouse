@@ -5,14 +5,17 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from '../../images/logo.png'
 import { Nav, NavDropdown } from "react-bootstrap";
 import CardWidget from "../CardWidget/CardWidget";
+import { Link } from "react-router-dom";
 
 const Navbarr = () => {
   return (
     <Navbar>
       <Container>
-        <Navbar.Brand href="#home">
+        {/* <Navbar.Brand href="/"> */}
+        <Link to='/'>
           <img src={logo} width='150px' alt="" />
-        </Navbar.Brand>
+        </Link>
+        {/* </Navbar.Brand> */}
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
         <Nav className="me-auto">
