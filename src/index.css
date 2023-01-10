@@ -7,3 +7,14 @@
     position: absolute;
     right: -35%;
 }
+
+.product-detail-container {
+    width: fit-content;
+}
+
+.link {
+    text-decoration: none;
+    margin: 0 8px;
+    color: rgb(82, 82, 82);
+    font-weight: 500;
+}

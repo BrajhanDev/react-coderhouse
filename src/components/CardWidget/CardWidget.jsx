@@ -8,7 +8,7 @@ const CardWidget = () => {
         <div className='fs-2'>
             <div className='container-wid'>
             
-            <span class="badge rounded-pill bg-primary ">4</span>
+            <span className="badge rounded-pill bg-primary ">4</span>
            <AiOutlineShoppingCart/>  
            </div>
         </div>
