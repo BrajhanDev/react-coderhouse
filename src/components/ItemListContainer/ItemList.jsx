@@ -14,16 +14,16 @@ const ItemList = ({prod}) => {
   return (
     
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={prod.img} onClick={()=>redirectItemDetail(prod.id)} />
+        <Card.Img variant="top" src={prod.img}  />
         <Card.Body>
           <Card.Title>{prod.nombre}</Card.Title>
-          <Card.Text>
+          {/* <Card.Text>
             {prod.descripcion}
-          </Card.Text>
+          </Card.Text> */}
           <Card.Text>
             $ {prod.precio}
           </Card.Text>
-          <Button variant="primary">Add Cart</Button>
+          <Button variant="primary" onClick={()=>redirectItemDetail(prod.id)}> Ver Detalles</Button>
         </Card.Body>
       </Card>
     

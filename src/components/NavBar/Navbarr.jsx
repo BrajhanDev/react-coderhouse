@@ -18,17 +18,12 @@ const Navbarr = () => {
         {/* </Navbar.Brand> */}
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-        <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Promociones</Nav.Link>
-            <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Laptops</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Teclados
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Computadoras</NavDropdown.Item>
-              
-            </NavDropdown>
+        <Nav className="mx-auto">
+            <Link  className="link" to='/category/laptop'>Laptops</Link>
+            <Link className="link" to="/category/teclado">Teclados</Link>
+            <Link className="link" to="/category/computadora">Computadoras</Link>
+            <Link className="link" to="/category/mouse">Mouse</Link>
+                       
           </Nav>
           <Navbar.Text>
             <CardWidget />

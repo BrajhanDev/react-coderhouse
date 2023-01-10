@@ -20,4 +20,17 @@ const productsById = (id)=> {
  })
 }
 
-export {allProducts, productsById};
+const productsByCategory = (category) => {
+
+return new Promise((resolve)=> {
+ 
+    setTimeout(()=> {
+        let productoEncontrado = database.filter(prod => prod.categoria == category )
+        resolve(productoEncontrado)
+
+    }, 1000)
+})
+
+}
+
+export {allProducts, productsById, productsByCategory};
