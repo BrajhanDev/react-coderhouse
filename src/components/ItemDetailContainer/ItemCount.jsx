@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { useContext } from 'react';
+import GlobalContext from '../../context/GlobalContext';
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, show, setShow, products}) => {
 
 const [counter, setcounter] = useState(1)
+const {setcountCart ,countCart, setcarrito } = useContext(GlobalContext);
 
 const addCart = () => {
+setcountCart(countCart+1)   
 alert(`${counter} producto agregado al carrito`)
+setShow(!show)
+products.cantidad = counter;
+setcarrito(products);
 }
 
     return (

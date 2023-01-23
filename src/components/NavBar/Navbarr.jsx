@@ -26,7 +26,7 @@ const Navbarr = () => {
                        
           </Nav>
           <Navbar.Text>
-            <CardWidget />
+           <Link to="/cart"> <CardWidget /></Link> 
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
