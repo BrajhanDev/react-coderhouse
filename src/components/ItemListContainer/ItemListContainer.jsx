@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { obtenerProductos, obtenerProductosPorCategoria} from "../../services/firebase";
 import { allProducts, productsByCategory } from "../../services/mockServices";
 import ItemList from "./ItemList";
 
@@ -10,15 +11,12 @@ const ItemListContainer = () => {
   const [category, setcategory] = useState([]);
 
   useEffect(() => {
-    allProducts().then((res) => setproducts(res));
-    productsByCategory(categoryId).then((res) => setcategory(res));
-  }, [products, category]);
+    
+    obtenerProductos().then((res) => setproducts(res));    
+    obtenerProductosPorCategoria(categoryId).then((res) => setcategory(res));
+  }, [categoryId]);
 
-//   useEffect(() => {
-//     productsByCategory(categoryId).then((res) => setcategory(res));
-//   }, []);
-
-  
+ 
 
   return (
     <div className="container">

@@ -1,20 +1,36 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
+import Swal from 'sweetalert2';
 import GlobalContext from '../../context/GlobalContext';
 
 const ItemCount = ({stock, show, setShow, products}) => {
 
 const [counter, setcounter] = useState(1)
-const {setcountCart ,countCart, setcarrito } = useContext(GlobalContext);
+const {setcountCart ,countCart, setcarrito, carrito } = useContext(GlobalContext);
 
 const addCart = () => {
+// buscando duplicados
+const buscaDuplicados = carrito.find(prod => prod.id == products.id) 
+if (buscaDuplicados){
+    Swal.fire(
+        'Advertencia!',
+        'ya se agrego ese producto al carrito!',
+        'warning'
+      )
+      return;
+}
+
 setcountCart(countCart+1)   
 alert(`${counter} producto agregado al carrito`)
 setShow(!show)
 products.cantidad = counter;
-setcarrito(products);
-}
+products.subtotal = products.cantidad * products.precio;
+setcarrito([...carrito,products]);
 
+
+
+}
+// console.log(carrito);
     return (
         <div className='d-flex justify-content-start'>
             <div className='d-flex border rounded p-2'>

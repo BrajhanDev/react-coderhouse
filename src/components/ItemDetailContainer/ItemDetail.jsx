@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { productsById } from "../../services/mockServices";
 import ItemCount from "./ItemCount";
 import Button from "react-bootstrap/Button";
+import { obtenerProductosPorId } from "../../services/firebase";
 
 const ItemDetail = () => {
   const [products, setproducts] = useState([]);
@@ -11,7 +12,8 @@ const ItemDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    productsById(id).then((res) => setproducts(res));
+    obtenerProductosPorId(id).then((res) => setproducts(res));
+    
   }, []);
 
   return (
